@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct slugApp: App {
+struct ScreenshotNamerApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        // No main window — pure menu bar app
+        Settings {
+            SettingsView()
         }
     }
 }
